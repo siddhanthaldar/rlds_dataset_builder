@@ -4,10 +4,7 @@ The dataset comprises 14 trajectories with one trajectory for each task from the
 
 ## Creating the dataset
 - The data can be downloaded from link to the dataset given on the paper website. The dataset can also be downloaded from
-this [link](https://osf.io/zgh2f/download). Terminal command to download the dataset is given below:
-```
-wget https://osf.io/zgh2f/download
-```
+this [link](https://osf.io/zgh2f?view_only=e29b9dc9ea474d038d533c2245754f0c).
 - Change the path in line 5 of `rot/create_rot_dataset.py` to the format `/path/to/dir/expert_demos/robotgym`.
 - Run the following commands to convert the dataset to the appropriate format:
 ```

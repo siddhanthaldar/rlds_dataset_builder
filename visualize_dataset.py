@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 import wandb
 
 
-WANDB_ENTITY = None
+WANDB_ENTITY = 'siddhanthaldar'
 WANDB_PROJECT = 'vis_rlds'
 
 

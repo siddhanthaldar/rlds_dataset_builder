@@ -62,13 +62,14 @@ def transform_step(step: Dict[str, Any]) -> Dict[str, Any]:
     """Maps step from source dataset to target dataset config.
        Input is dict of numpy arrays."""
     img = Image.fromarray(step['observation']['image']).resize(
-        (128, 128), Image.Resampling.LANCZOS)
+        (128, 128), Image.LANCZOS)
     transformed_step = {
         'observation': {
             'image': np.array(img),
+            'state': step['observation']['state'],
         },
         'action': np.concatenate(
-            [step['action'][:3], step['action'][5:8], step['action'][-2:]]),
+            [step['action'], np.array([step['is_last']], dtype=np.float32)]),
     }
 
     # copy over all other fields unchanged
